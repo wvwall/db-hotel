@@ -1,0 +1,9 @@
+query_1: mysql> SELECT * FROM `ospiti` WHERE `document_type` = "CI";
+query_2: mysql> SELECT * FROM `ospiti` WHERE `date_of_birth` > "1988-01-01";
+query_3: mysql> SELECT * FROM `ospiti` WHERE `date_of_birth` < "2001-05-06";
+query_4: mysql> SELECT * FROM `ospiti` WHERE `name` LIKE "D%" ;
+query_5: mysql> SELECT SUM(price) FROM `pagamenti` WHERE `status` = "accepted";
+query_6: mysql> SELECT MAX(price) FROM `pagamenti` WHERE `status` = "accepted"; | mysql> SELECT MAX(price) FROM `pagamenti`;
+query_7: mysql> SELECT * FROM `ospiti` WHERE `document_type` = "Driver License" AND `date_of_birth` LIKE "1975%" ;
+query_8: mysql> SELECT COUNT(id) FROM `paganti` WHERE `ospite_id` <> "NULL";
+query_9: mysql> SELECT SUM(beds) FROM `stanze`;

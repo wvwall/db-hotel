@@ -1,0 +1,5 @@
+query_1: mysql> SELECT COUNT(date_of_birth), `date_of_birth` FROM `ospiti`GROUP BY `date_of_birth` ;
+query_2: mysql> SELECT SUM(price),status FROM `pagamenti` GROUP BY `status`;
+query_3: mysql> SELECT COUNT(stanza_id),`stanza_id` FROM `prenotazioni` GROUP BY `stanza_id`;
+query_4: mysql> SELECT COUNT(HOUR(created_at)),HOUR(created_at) FROM `prenotazioni` GROUP BY HOUR(created_at) ;
+query_5: mysql> SELECT COUNT(ospite_id) FROM `prenotazioni_has_ospiti` GROUP BY `ospite_id` ORDER BY COUNT(ospite_id) DESC LIMIT 1;
