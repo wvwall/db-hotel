@@ -1,6 +1,6 @@
 query_1: mysql> SELECT * FROM `ospiti` WHERE `document_type` = "CI";
 query_2: mysql> SELECT * FROM `ospiti` WHERE `date_of_birth` > "1988-01-01";
-query_3: mysql> SELECT * FROM `ospiti` WHERE `date_of_birth` < "2001-05-06";
+query_3: mysql> SELECT * FROM `ospiti` WHERE `date_of_birth` < "2001-05-06"; (< NOW() - INTERVAL 20 YEAR;)
 query_4: mysql> SELECT * FROM `ospiti` WHERE `name` LIKE "D%" ;
 query_5: mysql> SELECT SUM(price) FROM `pagamenti` WHERE `status` = "accepted";
 query_6: mysql> SELECT MAX(price) FROM `pagamenti` WHERE `status` = "accepted"; | mysql> SELECT MAX(price) FROM `pagamenti`;

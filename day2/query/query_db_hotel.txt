@@ -1,0 +1,11 @@
+query_1: mysql> SELECT `ospiti`.`name`, `ospiti`.`lastname`, COUNT(`prenotazioni_has_ospiti`.`id`) AS "prenotazioni" FROM `prenotazioni_has_ospiti` INNER JOIN `ospiti` ON `prenotazioni_has_ospiti`.`ospite_id` = `ospiti`.`id` GROUP BY `ospiti`.`id` HAVING `prenotazioni` > 2 
+
+query_2: mysql> SELECT name,lastname  FROM ospiti INNER JOIN prenotazioni_has_ospiti ON ospiti . id = prenotazioni_has_ospiti . ospite_id ; 
+
+query_3: mysql> SELECT `paganti`.`name`, `paganti`.`lastname`,`pagamenti`.`price`, `prenotazioni`.`created_at` FROM `pagamenti` JOIN `paganti` ON `pagamenti`.`pagante_id` = `paganti`.`id` JOIN `prenotazioni` ON `pagamenti`.`prenotazione_id` = `prenotazioni`.`id` WHERE YEAR(`prenotazioni`.`created_at`) = 2018 AND MONTH(`prenotazioni`.`created_at`) = 05 
+
+query_4: mysql> SELECT SUM(`pagamenti`.`price`), `stanze`.`floor` FROM `prenotazioni` JOIN `stanze` ON `prenotazioni`.`stanza_id` = `stanze`.`id` JOIN `pagamenti` ON `pagamenti`.`prenotazione_id`= `prenotazioni`.`id` WHERE `stanze`.`floor` = "1" 
+
+query_5: mysql> SELECT `prenotazioni`.`id`, `paganti`.`name`,`paganti`.`lastname`,`paganti`.`address`,`pagamenti`.`price`, `pagamenti`.`created_at` FROM `prenotazioni` JOIN `pagamenti` ON `prenotazioni`.`id` = `pagamenti`.`prenotazione_id` JOIN `paganti` ON `pagamenti`.`pagante_id` = `paganti`.`id` WHERE `prenotazioni`.`id` = 7 
+
+query_6: mysql> SELECT `stanze`.`id`, COUNT(`prenotazioni`.`stanza_id`) AS "numero_prenotazioni" FROM `prenotazioni` RIGHT JOIN `stanze` ON `prenotazioni`.`stanza_id` = `stanze`.`id` GROUP BY `stanze`.`id` HAVING `numero_prenotazioni` = 0 
