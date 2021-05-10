@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" /> 
+    <!-- css -->
+    <link rel="stylesheet" href="./dist/css/master.css">
+</head>
+<body >
+    
+
+    <div id="root">
+       <table>
+           <thead>
+            <tr>
+                <th>ID</th>
+                <th>ROOM NUMBER</th>
+            </tr>
+           </thead>
+           <tbody>
+            <tr v-for="room in rooms">
+                <td>Room : </td>
+                <td @click="getDetails(room.id)">{{room.room_number}}</td>
+            </tr>
+           </tbody>
+       </table>
+                
+       
+        <div v-if="room !=null">
+            <div>
+                <strong>id</strong> {{room.id}}
+            </div>
+            <div>
+                <strong>room number</strong> {{room.room_number}}
+            </div>
+            <div>
+                <strong>floor</strong> {{room.floor}}
+            </div>
+            <div>
+                <strong>beds</strong> {{room.beds}}
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    
+    <!-- SCRIPT -->
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
+    <script src='https://cdn.jsdelivr.net/npm/vue'></script>
+    <script src="./dist/js/main.js"></script>
+</body>
+</html>

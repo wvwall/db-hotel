@@ -1,0 +1,26 @@
+{
+  "name": "db-hotel",
+  "version": "1.0.0",
+  "description": "db-hotel Dopo aver creato un nuovo database nel vostro phpMyAdmin e aver importato lo schema allegato, eseguite le query del file allegato. Cosa consegnare? Dopo aver testato le vostre query con phpMyAdmin, riportatele in un file txt e caricatelo, con gli screenshoots, nella vostra repo.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wvwall/db-hotel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wvwall/db-hotel/issues"
+  },
+  "homepage": "https://github.com/wvwall/db-hotel#readme",
+  "devDependencies": {
+    "laravel-mix": "^6.0.19",
+    "postcss": "^8.1.14",
+    "sass": "^1.32.12",
+    "sass-loader": "^11.0.1"
+  }
+}
