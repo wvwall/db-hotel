@@ -8,4 +8,4 @@ query_4: mysql> SELECT SUM(`pagamenti`.`price`), `stanze`.`floor` FROM `prenotaz
 
 query_5: mysql> SELECT `prenotazioni`.`id`, `paganti`.`name`,`paganti`.`lastname`,`paganti`.`address`,`pagamenti`.`price`, `pagamenti`.`created_at` FROM `prenotazioni` JOIN `pagamenti` ON `prenotazioni`.`id` = `pagamenti`.`prenotazione_id` JOIN `paganti` ON `pagamenti`.`pagante_id` = `paganti`.`id` WHERE `prenotazioni`.`id` = 7 
 
-query_6: mysql> SELECT `stanze`.`id`, COUNT(`prenotazioni`.`stanza_id`) AS "numero_prenotazioni" FROM `prenotazioni` RIGHT JOIN `stanze` ON `prenotazioni`.`stanza_id` = `stanze`.`id` GROUP BY `stanze`.`id` HAVING `numero_prenotazioni` = 0 
+query_6: mysql> SELECT `stanze`.`id`, COUNT(`prenotazioni`.`stanza_id`) AS "numPrenotazioni" FROM `prenotazioni` RIGHT JOIN `stanze` ON `prenotazioni`.`stanza_id` = `stanze`.`id` GROUP BY `stanze`.`id` HAVING `numPrenotazioni` = 0 
