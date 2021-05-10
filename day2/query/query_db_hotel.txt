@@ -2,7 +2,7 @@ query_1: mysql> SELECT `ospiti`.`name`, `ospiti`.`lastname`, COUNT(`prenotazioni
 
 query_2: mysql> SELECT name,lastname  FROM ospiti INNER JOIN prenotazioni_has_ospiti ON ospiti . id = prenotazioni_has_ospiti . ospite_id ; 
 
-query_3: mysql> SELECT `paganti`.`name`, `paganti`.`lastname`,`pagamenti`.`price`, `prenotazioni`.`created_at` FROM `pagamenti` JOIN `paganti` ON `pagamenti`.`pagante_id` = `paganti`.`id` JOIN `prenotazioni` ON `pagamenti`.`prenotazione_id` = `prenotazioni`.`id` WHERE YEAR(`prenotazioni`.`created_at`) = 2018 AND MONTH(`prenotazioni`.`created_at`) = 05 
+query_3: mysql> SELECT `paganti`.`name`, `paganti`.`lastname`,`pagamenti`.`price` FROM `pagamenti` JOIN `paganti` ON `pagamenti`.`pagante_id` = `paganti`.`id` JOIN `prenotazioni` ON `pagamenti`.`prenotazione_id` = `prenotazioni`.`id` WHERE YEAR(`prenotazioni`.`created_at`) = 2018 AND MONTH(`prenotazioni`.`created_at`) = 05 
 
 query_4: mysql> SELECT SUM(`pagamenti`.`price`), `stanze`.`floor` FROM `prenotazioni` JOIN `stanze` ON `prenotazioni`.`stanza_id` = `stanze`.`id` JOIN `pagamenti` ON `pagamenti`.`prenotazione_id`= `prenotazioni`.`id` WHERE `stanze`.`floor` = "1" 
 
