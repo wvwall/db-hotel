@@ -25,7 +25,7 @@
            </thead>
            <tbody>
             <tr v-for="room in rooms">
-                <td>Room : </td>
+                <td>Room : {{room.id}} </td>
                 <td @click="getDetails(room.id)">{{room.room_number}}</td>
             </tr>
            </tbody>

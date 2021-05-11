@@ -4,3 +4,13 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+#root {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  justify-content: space-around;
+}
